@@ -194,11 +194,13 @@ function utility.format_table(tbl)
     end
 end
 
+
+
 local venuslib = utility.create("ScreenGui", {})
 
-if syn and syn.protect_gui then
-    syn.protect_gui(venuslib)
-end
+-- if syn and syn.protect_gui then
+--     syn.protect_gui(venuslib)
+-- end
 
 venuslib.Parent = coreGui
 
