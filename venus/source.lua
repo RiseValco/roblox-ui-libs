@@ -194,7 +194,9 @@ function utility.format_table(tbl)
     end
 end
 
-
+for _,v in pairs(coreGui:getChildren()) do
+	if v.Name:find(utility.version) then v:Destroy() end
+end
 
 local venuslib = utility.create("ScreenGui", {})
 
