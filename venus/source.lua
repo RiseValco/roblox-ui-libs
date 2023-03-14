@@ -77,6 +77,17 @@ function utility.starts_with(str, start)
     return str:sub(1, string.len(start)) == start
 end
 
+function randomString(length)
+  length = length or 10
+  local charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  local randomString = ""
+  for i = 1, length do
+    local randomIndex = math.random(1, #charset)
+    randomString = randomString .. string.sub(charset, randomIndex, randomIndex)
+  end
+  return randomString
+end
+
 function utility.create(class, properties)
     local obj = Instance.new(class)
 
@@ -85,11 +96,8 @@ function utility.create(class, properties)
         AutoButtonColor = false
     }
 
-    obj.Name = ""
+    obj.Name = "FORK_"..randomString
 
-    for i = 1, 16 do
-        obj.Name = obj.Name .. string.char(math.random(48, 122))
-    end
 
     for prop, v in next, properties do
         obj[prop] = v
