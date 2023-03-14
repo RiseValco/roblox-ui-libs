@@ -3,7 +3,7 @@ local tweenService = game:GetService("TweenService")
 local runService = game:GetService("RunService")
 local coreGui = game:GetService("CoreGui")
 
-local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1}
+local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1, version = "v0.0.1"}
 
 local themes = {
     Dark = {
@@ -96,7 +96,7 @@ function utility.create(class, properties)
         AutoButtonColor = false
     }
 
-    obj.Name = "FORK_"..randomString
+    obj.Name = library.version.."_"..randomString()
 
 
     for prop, v in next, properties do
