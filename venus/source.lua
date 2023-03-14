@@ -3,7 +3,7 @@ local tweenService = game:GetService("TweenService")
 local runService = game:GetService("RunService")
 local coreGui = game:GetService("CoreGui")
 
-local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1, version = "v0.0.1"}
+local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1}
 
 local themes = {
     Dark = {
@@ -71,7 +71,7 @@ for i, v in next, themes.Dark do
     themeObjects[i] = {}
 end
 
-local utility = {}
+local utility = {version = "v0.0.1"}
 
 function utility.starts_with(str, start)
     return str:sub(1, string.len(start)) == start
@@ -96,7 +96,7 @@ function utility.create(class, properties)
         AutoButtonColor = false
     }
 
-    obj.Name = library.version.."_"..randomString()
+    obj.Name = utility.version.."_"..randomString()
 
 
     for prop, v in next, properties do
