@@ -3,7 +3,7 @@ local tweenService = game:GetService("TweenService")
 local runService = game:GetService("RunService")
 local coreGui = game:GetService("CoreGui")
 
-local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1, message = "- hellokitty.pro | [RIGHTSHIFT] To Close Menu"}
+local library = {flags = {}, toggled = true, keybind = Enum.KeyCode.RightShift, dragSpeed = 0.1, message = "- Exoify | [RIGHTSHIFT] To Close Menu"}
 
 local themes = {
     Dark = {
